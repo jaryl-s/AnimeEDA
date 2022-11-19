@@ -53,14 +53,9 @@ for name in filtered_names:
 
 stripped= []
 
-crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/5ag0kb/recommendation_
-tuesdays_week_of_november_01_2016/',stripped)
-
-crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/3pa2it/lets_list_anime
-_that_affected_your_emotions/',stripped)
-
-crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/947lub/good_anime_reco
-mmendations/',stripped)
+crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/5ag0kb/recommendation_tuesdays_week_of_november_01_2016/',stripped)
+crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/3pa2it/lets_list_anime_that_affected_your_emotions/',stripped)
+crunchHTMLURLtostripped('https://old.reddit.com/r/anime/comments/947lub/good_anime_recommendations/',stripped)
 
 for name in filtered_names:
  for para in stripped:
@@ -79,8 +74,7 @@ cond = df['count'] > 5
 df_filter = df[cond]
 fig2 = plt.figure(figsize = (18,10))
 plt.barh(df_filter['name'],df_filter['count'],color = 'lightcoral')
-plt.title('Most Common Anime Titles from Web-Scraping of Subreddit Threads', fontsize =
-20)
+plt.title('Most Common Anime Titles from Web-Scraping of Subreddit Threads', fontsize = 20)
 
 df_filter
 
@@ -159,8 +153,7 @@ genre_web['Game'] += df_filter.iloc[12,1]
 genre_web['Psychological'] += df_filter.iloc[12,1]
 genre_web['Drama'] += df_filter.iloc[12,1]
 genre_web['Thriller'] += df_filter.iloc[12,1]
-#fullmetal alchemist: Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shoun
-en
+#fullmetal alchemist: Action, Adventure, Comedy, Drama, Fantasy, Magic, Military, Shounen
 genre_web['Drama'] += df_filter.iloc[13,1]
 genre_web['Comedy'] += df_filter.iloc[13,1]
 genre_web['Adventure'] += df_filter.iloc[13,1]
