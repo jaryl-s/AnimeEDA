@@ -52,7 +52,7 @@ Top 5 Anime Genres (from `anime.csv`): Comedy, Action, Adventure, Fantasy, Sci-f
 
 Top 3 Types of Anime (from `anime.csv`): TV, OVA, Movie
 
-Top 5 Anime Genres (sentiments on Reddit): Drama, Comedy, Shounen, School, Supernatural
+Top 5 Anime Genres (Reddit sentiments): Drama, Comedy, Shounen, School, Supernatural
 
 
 
