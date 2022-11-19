@@ -133,8 +133,7 @@ sns.barplot(x = genre_list,
  y = genre_count_list,
  color = 'steelblue')
 plt.title('Bar Chart of Anime Genres', fontsize = 20)
-# Rotate the genres on the x-axis to ensure that they do not overlap and become illegib
-le
+# Rotate the genres on the x-axis to ensure that they do not overlap and become illegible
 plt.xticks(rotation = 'vertical')
 # Ensure that the divisions on the y-axis are appropriate
 plt.yticks(np.arange(0, 5001, 500))
