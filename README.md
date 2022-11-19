@@ -12,7 +12,7 @@ then executed to identify the most positively-viewed genres of anime by a sample
 ## Part 1: Exploratory Data Analysis of Anime Dataset from Kaggle
 
 ### Data Source
-Anime Recommendations Database, Kaggle (https://www.kaggle.com/CooperUnion/animerecommendations-database), Retrieved on 22 July 2019
+Anime Recommendations Database, Kaggle (https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database), Retrieved on 22 July 2019
 
 ### KDE Plot of Anime Ratings
 
