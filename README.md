@@ -58,7 +58,7 @@ Top 5 Anime Genres (Reddit sentiments): Drama, Comedy, Shounen, School, Supernat
 
 ## References
 1. Category_Visualization, Kaggle (https://www.kaggle.com/xthunder94/category-visualization)
-2. anime, Kaggle (https://www.kaggle.com/igoratsberger/anime)
+2. Anime, Kaggle (https://www.kaggle.com/igoratsberger/anime)
 3. WHAT IS ANIME?, BellaOnline (http://www.bellaonline.com/articles/art4260.asp)
 4. Framing Attention in Japanese and American Comics: Cross-Cultural Differences in Attentional
 Structure, NCBI (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3449338/)
