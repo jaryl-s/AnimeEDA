@@ -31,11 +31,11 @@ Anime Recommendations Database, Kaggle (https://www.kaggle.com/datasets/CooperUn
 ## Part 2: Web Scraping of Selected Subreddit Threads
 
 ### Data Source
-Subreddit thread 1: https://old.reddit.com/r/anime/comments/5ag0kb/recommendation_tuesdays_week_of_november_01_2016/
+Thread 1: https://old.reddit.com/r/anime/comments/5ag0kb/recommendation_tuesdays_week_of_november_01_2016/
 
-Subreddit thread 2: https://old.reddit.com/r/anime/comments/3pa2it/lets_list_anime_that_affected_your_emotions/
+Thread 2: https://old.reddit.com/r/anime/comments/3pa2it/lets_list_anime_that_affected_your_emotions/
 
-Subreddit thread 3: https://old.reddit.com/r/anime/comments/947lub/good_anime_recommendations/'
+Thread 3: https://old.reddit.com/r/anime/comments/947lub/good_anime_recommendations/'
 
 ### Web Scraping Results for Most Common Anime Titles
 
