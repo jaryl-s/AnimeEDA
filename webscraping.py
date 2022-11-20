@@ -1,4 +1,4 @@
-def urlToHTML(url):
+def urlToHTML(url): 
 	headers = {'User-Agent': 'Mozilla/5.0'}
 	HTML = requests.get(url, headers=headers)
 	time.sleep(2)
