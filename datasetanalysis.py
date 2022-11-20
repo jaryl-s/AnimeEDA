@@ -27,14 +27,14 @@ anime_df.describe()
 # visualise distribution of rating scores from anime dataset using a KDE plot
 rating_skewness = anime_df['rating'].skew()
 print('The skewness of the "rating" column is: ' + str(rating_skewness))
-# Define figure size
 fig1 = plt.figure(figsize=(10, 6))
-# Plot graph
 ax1 = fig1.add_subplot(111)
-sns.kdeplot(anime_df['rating'],
- kernel='gau', # Code for shape of kernel to fit with. Bivariate KDE can only use Gaussian kernel
- bw=0.4, # bw affects curve smoothness. Small bw is precise but potentially messy, large bw is smooth but vague
- shade=True)
+sns.kdeplot(
+	anime_df['rating'],
+	kernel='gau', # Code for shape of kernel to fit with. Bivariate KDE can only use Gaussian kernel
+	bw=0.4, # bw affects curve smoothness. Small bw is precise but potentially messy, large bw is smooth but vague
+	shade=True
+)
 # Define axis titles and title
 ax1.set_xlabel("rating", fontsize = 15)
 ax1.set_ylabel("density", fontsize = 15)
@@ -54,11 +54,13 @@ highest_type_proportion = highest_type_count / total_count # This calculates the
 print('The proportion of ' + str(anime_types_df['type'][0]) + '-type anime is: ' + str(highest_type_proportion))
 # Plot data as a horizontal bar chart
 plt.figure(figsize = (12,8))
-plt.barh(anime_types['type'], # y-axis of the bar chart
- anime_types['count'], # x-axis of the bar chart
- align = 'center', # Center the bars on the y-coordinates
- color='forestgreen',
- edgecolor ='black')
+plt.barh(
+	anime_types['type'], # y-axis of the bar chart
+	anime_types['count'], # x-axis of the bar chart
+	align = 'center', # Center the bars on the y-coordinates
+	color='forestgreen',
+	edgecolor ='black'
+)
 plt.gca().invert_yaxis()
 plt.title('Bar Chart of Anime by Type', fontsize =20)
 plt.xlabel('Count', fontsize =15)
@@ -70,12 +72,12 @@ plt.ylabel('Type', fontsize =15)
 genres = set()
 # Iterate through each entry, with focus on the genre column
 for entry in anime_df['genre']:
- # Without the condition below, AttributeError will occur: 'float' object has no attribute 'split'
- # If the genre isn't a string, the continue' statement continues to the next iteration of the loop (skip)
- if type(entry) is not str:
- continue
- # The split() method splits a string into a list. Specify separator as comma.
- genres.update(entry.split(", "))
+	# Without the condition below, AttributeError will occur: 'float' object has no attribute 'split'
+	# If the genre isn't a string, the continue' statement continues to the next iteration of the loop (skip)
+	if type(entry) is not str:
+		continue
+	# The split() method splits a string into a list. Specify separator as comma.
+	genres.update(entry.split(", "))
 # Note that a set cannot have duplicate elements by definition. Thus there is no need to deliberately prevent double-adding
 print(genres)
 print("Total Genres: " + str(len(genres)))
@@ -86,12 +88,12 @@ print("Total Genres: " + str(len(genres)))
 # When we type 'defaultdict(int)', the default value of each key in 'genres_count' is 0
 genres_count = collections.defaultdict(int)
 for entry in anime_df['genre']:
- # Same as above, only proceed with 'entry' if it is a string type
- if type(entry) is not str:
- continue
- # 'entry.split(", ")' can look something like this: ['Horror', 'Comedy', 'Action', 'Drama']
- for genre in entry.split(", "):
- genres_count[genre] += 1
+	# Same as above, only proceed with 'entry' if it is a string type
+	if type(entry) is not str:
+		continue
+	# 'entry.split(", ")' can look something like this: ['Horror', 'Comedy', 'Action', 'Drama']
+	for genre in entry.split(", "):
+		genres_count[genre] += 1
 
 genres_count = sorted(genres_count.items(), key=operator.itemgetter(1), reverse=True)
 print(genres_count)
@@ -108,13 +110,15 @@ genre_count_list = []
 # Recall that genres_count is a list of tuples, with each tuple containing the genre and its count: e.g. ('Comedy', 4645)
 # Iterate through each nested tuple within the list, and append the genre and its count to the two lists
 for each_tuple in genres_count:
- genre_list.append(each_tuple[0])
- genre_count_list.append(each_tuple[1])
+	genre_list.append(each_tuple[0])
+	genre_count_list.append(each_tuple[1])
 # Plot bar chart using seaborn
 fig2 = plt.figure(figsize = (18,10))
-sns.barplot(x = genre_list,
- y = genre_count_list,
- color = 'steelblue')
+sns.barplot(
+	x = genre_list,
+	y = genre_count_list,
+	color = 'steelblue'
+)
 plt.title('Bar Chart of Anime Genres', fontsize = 20)
 # Rotate the genres on the x-axis to ensure that they do not overlap and become illegible
 plt.xticks(rotation = 'vertical')
